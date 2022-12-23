@@ -1,0 +1,323 @@
+/*for header*/
+.site-container{
+  background-color: #fff;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 0 20px 0 rgb(245, 41, 197);
+}
+/*forsite header*/
+.site-header{
+background-color: bisque;
+min-height: 150px;
+}
+/*forsite header wrap*/
+.site-header .wrap{
+  padding:10px  20px;
+}
+/*for title area*/
+.title-area{
+  padding:10px 0px;  
+  text-align:center;
+}
+/*for site area*/
+.site-title a{
+  color: gray;
+  text-decoration: none;
+  font-size: 60px;
+  font-weight: 100;
+  line-height: 1.0; 
+  text-transform: uppercase;
+}
+/*for navigation area, ul part*/
+.nav ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #fab9b5;
+} 
+/*for navigation area, li part*/
+.nav li a {
+display: block;
+padding: 20px 20px;
+text-decoration:none;
+color: #fff;
+}
+/*for navigation area, li part to have a hover part in the button*/
+.nav li a:hover, 
+.nav .menu-btn:hover{
+color:#565656;
+}
+
+/*for navigation menu that we declared in the first part of the navigation*/
+.nav .menu{
+clear:both;
+max-height: 0;
+text-transform: uppercase;
+transition:max-height .2s ease-in-out;
+overflow:hidden;
+text-align: center;
+}
+/*for navigation icon*/
+.nav .menu-icon{
+ cursor:pointer;
+ float: right;
+ padding: 28px 50%;
+ position: relative;
+ user-select: none;
+}
+/*for navigation area, to customize the icon and menu */
+.nav .menu-icon .nav-icon{
+background-color: #333;
+display: block;
+height: 2px;
+position: relative;
+width:18px;
+}
+/*for navigation area, to customize the icon and menu before and after clicking the nav*/
+.nav .menu-icon .nav-icon::before,
+.nav-icon::after{
+background-color: #333;
+content: '';
+display: block;
+position: absolute;
+height: 100%;
+width: 100%;
+}
+
+.nav .menu-icon .nav-icon::before{
+  top: 5px;
+}
+.nav .menu-icon .nav-icon::after{
+top: -5px;
+}
+
+.nav .menu-btn{
+  display: none;
+}
+
+.nav .menu-btn:checked ~ .menu{
+ max-height: 471px;
+}
+
+.nav .menu-btn:checked ~ .menu icon .nav-icon{
+background: transparent;
+}
+
+.nav .menu-btn:checked ~ .menu icon .nav-icon::before{
+transform: rotate(-45deg);
+top:0;
+}
+
+.nav .menu-btn:checked ~ .menu icon .nav-icon::after{
+transform: rotate(45deg);
+top:0;;
+}
+
+@media (min-width:48em) {
+.nav li{
+  display: inline-table;
+}
+
+.nav .menu{
+  clear: none;
+  display: block;
+  max-height: none;
+}
+
+.nav .menu-icon{
+  display: none;
+}
+}
+img{ /*resize the image */
+width:100%
+}
+/*for wrapper area */
+.wrapper{
+overflow:hidden;
+}
+/*this area is for the alignment of the picture and text */
+#content-left{
+float:left;
+margin-right:20px;
+width:50%;
+}
+
+#content-right{
+background-color: white; 
+overflow:hidden;
+margin: 1px;
+}
+
+#content-left{
+background-color: white; 
+overflow:hidden;
+}
+
+@media screen and (max-width:820px) {
+#content-left{
+  float:none;
+  margin-right:0;
+  width:auto;
+}
+img{
+  width:100%;
+}
+}
+
+#content-right a h2{
+font-size: 35px;
+font-weight: 100;
+color: rgb(73, 73, 73);
+line-height: 1.2;
+}
+#content-left a h2{
+  font-size: 35px;
+  font-weight: 100;
+  color: rgb(73, 73, 73);
+  line-height: 1.2;
+}
+#content-right a{
+color:#fb33c2;
+text-decoration: none;
+}
+#content-left a{
+  color:#fb33c2;
+  text-decoration: none;
+}
+#content-right h2:hoover{
+color:#d5554f;
+}
+/*for comments and categories area */
+#comments, #categories{
+text-decoration: none;
+color:#832924;
+text-transform: uppercase;
+font-family: Arial, Arial, Helvetica, sans-serif;
+}
+
+#comments:hover, #categories:hover{
+color:black;
+}
+
+/*for article area */
+#article{
+text-align: justify;
+margin: 6 5 30px;
+line-height: 1.6;
+font-size: 16px;
+font-family: Arial, Helvetica, sans-serif;
+padding-top: 10px;
+padding-right: 50px;
+}
+
+/*this is fpr footer area*/
+.footer{
+  background-color: bisque;
+  text-align:center;
+}
+/*the pagination of the ul */
+.pagination ul{
+    list-style-type: none;
+    display: -webkit-inline-box;
+}
+/*the pagination of the li a */
+.pagination li a{
+  color: rgb(250, 82, 82);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  font-family: "Arial, Helvetica, sans-serif";
+}
+
+.pagination .active a{
+  color: #ffffff;
+}
+
+.pagination .hover{
+  color: #662f2c;
+} 
+
+.footer .wrap{
+  background-color: rgb(246, 144, 255);
+  padding: 40px;
+}
+
+.footer .site-footer .wrap{
+  background-color: rgb(248, 239, 229);
+  
+}
+/*for the login part */
+.form input[type=text]{
+  display:block;
+}
+/*to customize the input text or the login part */
+input[type=text] {
+  display: inline-block;
+  color: black;
+  padding: 15px;
+  width: 160px;
+  box-sizing: border-box;
+  background-color:#fff;
+  border: none;
+  font-family: sans-serif;
+  margin-right: 1%;
+}
+/*fot the button area */
+#subbutton{
+  background-color: #333;
+  border: none;
+  color:rgb(255, 255, 255) ;
+  margin: 0;
+  width: 160px;
+  padding: 15px;
+  box-sizing: border-box;
+  cursor:pointer;
+
+}
+
+#subbutton:hover{
+  background-color: bisque;
+}
+
+
+.fa {
+  padding: 15px;
+  font-size: 25px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 2px 5px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #f2a1f6;
+  color: rgb(5, 5, 5);
+}
+.fa-instagram {
+    background: #f2a1f6;
+    color: rgb(5, 5, 5);
+}
+.fa-pinterest {
+    background: #f2a1f6;
+    color: rgb(5, 5, 5);
+}
+.fa-twitter {
+    background: #f2a1f6;
+    color: rgb(5, 5, 5);
+}
+.fa-Email {
+    background: #f2a1f6;
+  color: rgb(5, 5, 5);
+}
+
+#more {display: none;}
+
+
+
+/*end */
